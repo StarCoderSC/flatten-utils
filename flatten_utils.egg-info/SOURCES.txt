@@ -1,9 +1,11 @@
 README.md
 setup.py
 flatten_utils/__init__.py
+flatten_utils/cli.py
 flatten_utils/core.py
 flatten_utils.egg-info/PKG-INFO
 flatten_utils.egg-info/SOURCES.txt
 flatten_utils.egg-info/dependency_links.txt
+flatten_utils.egg-info/entry_points.txt
 flatten_utils.egg-info/top_level.txt
 tests/test_core.py

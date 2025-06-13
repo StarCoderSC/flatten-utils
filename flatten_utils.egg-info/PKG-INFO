@@ -1,8 +1,8 @@
 Metadata-Version: 2.4
-Name: flatten_utils
+Name: flatten-utils
 Version: 0.1.0
-Summary: Deep flattten nested structure like a pro
-Author: StarCoderSC
+Summary: Deep flatten nested structures like a pro
+Author: StarCoder
 Classifier: Programming Language :: Python :: 3
 Classifier: Operating System :: OS Independent
 Requires-Python: >=3.7
