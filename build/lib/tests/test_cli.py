@@ -3,6 +3,7 @@ import json
 import sys
 import os
 import unittest
+import tempfile
 
 CLI_PATH = os.path.join(os.path.dirname(__file__), '..', 'flatten_utils', 'cli.py')
 
@@ -10,7 +11,7 @@ class TestCLI(unittest.TestCase):
 
     def run_cli(self, *args):
         """ Helper to run CLI command and return output """
-        cmd = [sys.executable, CLI_PATH] + list(args)
+        cmd = [sys.executable, "-m", "flatten_utils.cli"] + list(args)
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         return result
 
@@ -36,14 +37,13 @@ class TestCLI(unittest.TestCase):
 
     def test_cli_file_output(self):
         test_data = '[1, [2, 3]]'
-        try:
-            with open('test_temp.json', 'w') as f:
-                f.write(test_data)
-            result = self.run_cli('--file', 'test_temp.json')
-            self.assertIn('[1, 2, 3]', result.stdout)
-        finally:
-            if os.path.exists('test_temp.json'):
-                os.remove('test_temp.json')
+        with tempfile.NamedTemporaryFile(mode='w+', suffix='.json', delete=False) as f:
+            f.write(test_data)
+            f.flush()
+            result = self.run_cli('--file', f.name)
+        os.remove(f.name)
+        self.assertIn('[1, 2 , 3]', result.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()
