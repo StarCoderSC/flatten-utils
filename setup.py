@@ -19,7 +19,7 @@ setup(
         "Operating System :: OS Independent"
     ],
     python_requires='>=3.7',
-    extra_require={
+    extras_require={
         "dev": ["pytest"]
     },
     entry_points={
