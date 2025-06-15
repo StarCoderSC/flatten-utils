@@ -1,0 +1,2 @@
+[console_scripts]
+flatten-utils = flatten_utils.cli:main

@@ -1,3 +1,23 @@
+Metadata-Version: 2.4
+Name: flatten-utils
+Version: 0.1.2
+Summary: CLi + module to deeply flatten nested structures like a pro
+Author: StarCoderSC
+License: MIT
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: author
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-python
+Dynamic: summary
+
 
 
 # flatten-utils
@@ -23,7 +43,7 @@
 
 ### As a CLI tool:
 
-```bash
+'''bash
 flatten-utils "[1, [2, [3, 4]]]"
 # Output: [1, 2, 3, 4]
 
