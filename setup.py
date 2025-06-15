@@ -19,9 +19,6 @@ setup(
         "Operating System :: OS Independent"
     ],
     python_requires='>=3.7',
-    extras_require={
-        "dev": ["pytest"]
-    },
     entry_points={
         "console_scripts": [
             "flatten-utils = flatten_utils.cli:main",
