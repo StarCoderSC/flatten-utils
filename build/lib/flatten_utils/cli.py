@@ -18,7 +18,10 @@ Supports:
 import argparse
 import json
 import sys
-from .core import flatten_list, flatten_limited, deep_flatten
+try:
+    from .core import flatten_list, flatten_limited, deep_flatten
+except ImportError:
+    from flatten_utils.core import flatten_list, flatten_limited, deep_flatten
 
 def main():
     """
