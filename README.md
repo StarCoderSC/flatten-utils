@@ -24,6 +24,8 @@
 ### As a CLI tool:
 
 '''bash
+
+
 flatten-utils "[1, [2, [3, 4]]]"
 # Output: [1, 2, 3, 4]
 
