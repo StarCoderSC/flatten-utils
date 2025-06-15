@@ -11,7 +11,7 @@ class TestCLI(unittest.TestCase):
 
     def run_cli(self, *args):
         """ Helper to run CLI command and return output """
-        cmd = [sys.executable, "-m", "flatten_utils.cli"] + list(args)
+        cmd = [sys.executable, CLI_PATH] + list(args)
         result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         return result
 

@@ -1,5 +1,5 @@
 from collections.abc import Iterable, Mapping
-from typing import Any, Generator, Union
+from typing import Any, Generator, Union, List
 
 def deep_flatten(data: Any, stop_at: Union[type, tuple] = (str, bytes)) -> Generator:
     """
@@ -60,7 +60,7 @@ def flatten_limited(data: Any, depth: int = 1, stop_at: Union[type, tuple] = (st
         yield data
 
 
-def flatten_list(data: Any, stop_at: Union[type, tuple] = (str, bytes)) -> list[Any]:
+def flatten_list(data: Any, stop_at: Union[type, tuple] = (str, bytes)) -> List[Any]:
     """
     
     Fully flattens nested data into a list, stopping at types in 'stop_at".
