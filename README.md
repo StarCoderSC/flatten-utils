@@ -3,8 +3,9 @@
 # flatten-utils
 [![PyPI version](https://badge.fury.io/py/flatten-utils.svg)](https://pypi.org/project/flatten-utils/)
 
-[![Downloads](https://static.pepy.tech/badge/flatten-utils)](https://pepy/tech/project/flatten-utils)
+[![Downloads](https://static.pepy.tech/badge/flatten-utils)](https://pepy.tech/project/flatten-utils)
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/MIT)
 
 
 🔧 A lightweight utility to deeply flatten nested Python structure like 'lists', 'tuples', 'sets','dicts' and more -- without breaking a sweat.
